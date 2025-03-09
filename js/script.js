@@ -1,3 +1,10 @@
  // Aquí tu código
-// El boton 'AGREGAR ELEMENTO' debe hacer saltar un prompt.
-//ESE PROMPT debe estar linkeado a la lista ya creada para que al ingresar algo en el prompt se agregue a la lista
+const agregarLista = document.getElementById('lista');
+const botonAgregar = document.getElementById('agregar');
+
+botonAgregar.addEventListener(click, function() {
+  let elemento = prompt('AGREGA ELEMENTOS A LA LISTA');
+  let li = document.createElement('li');
+  li.textContent = elemento;
+  agregarLista.appendChild(li);
+}
